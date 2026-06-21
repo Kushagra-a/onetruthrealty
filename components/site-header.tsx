@@ -10,7 +10,7 @@ export function SiteHeader() {
   return (
     <header className="site-header" data-open={open}>
       <a className="brand-mark" href="#" aria-label={`${brand.name} home`}>
-        <span>P</span>
+        <span></span>
         <strong>{brand.name}</strong>
         <em>Private Office</em>
       </a>
