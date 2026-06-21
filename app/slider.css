@@ -1,0 +1,135 @@
+.process-slider {
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  display: flex;
+  min-height: 560px;
+  overflow: hidden;
+  position: relative;
+}
+
+.process-pane {
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.process-pane-left {
+  background:
+    linear-gradient(135deg, rgba(251, 244, 232, 0.86), rgba(245, 234, 217, 0.92)),
+    url("/advisory-study.png") center / cover no-repeat;
+}
+
+.process-pane-right {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(38, 23, 15, 0.97) 0%,
+      rgba(38, 23, 15, 0.94) 55%,
+      rgba(38, 23, 15, 0.82) 100%
+    ),
+    url("/blr-skyline-dusk.png") right bottom / cover no-repeat;
+  color: var(--almond-light);
+}
+
+.pane-inner {
+  display: grid;
+  gap: 1.4rem;
+  min-width: 320px;
+  padding: clamp(1.6rem, 3vw, 2.8rem);
+  position: relative;
+  z-index: 1;
+}
+
+.process-pane > span,
+.pane-inner > span {
+  color: var(--terracotta-dark);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.process-pane-right .pane-inner > span {
+  color: var(--almond);
+}
+
+.slider-step {
+  align-items: start;
+  border-top: 1px solid currentColor;
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 56px minmax(0, 1fr);
+  padding-top: 1.1rem;
+}
+
+.slider-step strong {
+  color: var(--terracotta-dark);
+  letter-spacing: 0.16em;
+}
+
+.process-pane-right .slider-step strong {
+  color: var(--almond);
+}
+
+.slider-step h4 {
+  font-size: 1.35rem;
+  margin: 0 0 0.4rem;
+}
+
+.slider-step p {
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.process-pane-right .slider-step p {
+  color: rgba(251, 244, 232, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.slider-handle {
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  cursor: ew-resize;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 44px;
+  z-index: 4;
+}
+
+.slider-handle::before {
+  background: rgba(251, 244, 232, 0.6);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 2px;
+}
+
+.handle-grip {
+  align-items: center;
+  background: var(--terracotta-dark);
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(46, 29, 20, 0.3);
+  color: var(--almond-light);
+  display: flex;
+  font-size: 1.1rem;
+  height: 3rem;
+  justify-content: center;
+  position: relative;
+  width: 3rem;
+}
+
+.slider-rhythm {
+  color: var(--terracotta-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin: 0.25rem 0 0.55rem;
+  text-transform: uppercase;
+}
